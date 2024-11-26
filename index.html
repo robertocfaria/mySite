@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roberto Faria 2025 - Candidato à Junta de Freguesia de Roriz. Juntos por uma Roriz melhor, com inovação, transparência e proximidade.">
+    <meta name="keywords" content="Roberto Faria, Junta de Freguesia, Roriz, Candidatura 2025, Política Local, Santo Tirso">
+    <meta name="author" content="Roberto Faria 2025">
+    <meta name="robots" content="index, follow">
     <title>Roberto Faria 2025 - Junta de Freguesia de Roriz</title>
     <style>
         /* Estilos base */
@@ -10,14 +14,14 @@
             margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f0f4ff; /* Azul claro como base */
-            color: #333;
+            background-color: var(--background-color, #f0f4ff); /* Ajuste dinâmico */
+            color: var(--text-color, #333); /* Ajuste dinâmico */
         }
 
         /* Cabeçalho */
         header {
-            background-color: #002855; /* Azul escuro */
-            color: white;
+            background-color: var(--header-bg, #002855); /* Ajuste dinâmico */
+            color: var(--header-text, white); /* Ajuste dinâmico */
             padding: 20px 0;
         }
 
@@ -33,20 +37,20 @@
 
         .main h2 {
             font-size: 2em;
-            color: #002855; /* Azul escuro */
+            color: var(--main-title-color, #002855); /* Ajuste dinâmico */
         }
 
         .main p {
             font-size: 1.2em;
-            color: #444;
+            color: var(--main-text-color, #444); /* Ajuste dinâmico */
             max-width: 800px;
             margin: 20px auto;
         }
 
         /* Rodapé */
         footer {
-            background-color: #ffd100; /* Amarelo vivo */
-            color: #002855; /* Azul escuro */
+            background-color: var(--footer-bg, #ffd100); /* Ajuste dinâmico */
+            color: var(--footer-text, #002855); /* Ajuste dinâmico */
             padding: 10px 0;
             font-size: 0.9em;
         }
@@ -56,8 +60,8 @@
             display: inline-block;
             margin-top: 20px;
             padding: 15px 30px;
-            background-color: #002855; /* Azul escuro */
-            color: white;
+            background-color: var(--btn-bg, #002855); /* Ajuste dinâmico */
+            color: var(--btn-text, white); /* Ajuste dinâmico */
             text-decoration: none;
             font-size: 1em;
             border-radius: 5px;
@@ -65,9 +69,39 @@
         }
 
         .btn:hover {
-            background-color: #004a9f; /* Azul mais claro no hover */
+            background-color: var(--btn-hover-bg, #004a9f); /* Ajuste dinâmico */
+        }
+
+        /* Tema escuro */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: #121212;
+                --text-color: #e0e0e0;
+                --header-bg: #1f1f1f;
+                --header-text: #f0f4ff;
+                --main-title-color: #88c0d0;
+                --main-text-color: #e0e0e0;
+                --footer-bg: #444444;
+                --footer-text: #ffd100;
+                --btn-bg: #88c0d0;
+                --btn-text: #1f1f1f;
+                --btn-hover-bg: #5e81ac;
+            }
         }
     </style>
+    <script>
+        // Define temas dinâmicos baseados no navegador
+        document.addEventListener('DOMContentLoaded', () => {
+            const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            if (theme === 'dark') {
+                document.documentElement.style.setProperty('--background-color', '#121212');
+                document.documentElement.style.setProperty('--text-color', '#e0e0e0');
+            } else {
+                document.documentElement.style.setProperty('--background-color', '#f0f4ff');
+                document.documentElement.style.setProperty('--text-color', '#333');
+            }
+        });
+    </script>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -78,9 +112,9 @@
 
     <!-- Seção principal -->
     <div class="main">
-        <h2>Juntos por um Roriz Melhor</h2>
+        <h2>Juntos por Roriz Melhor</h2>
         <p>Em 2025, contamos com o seu apoio para trazer inovação, transparência e proximidade à Junta de Freguesia de Roriz. Roberto Faria está comprometido com a valorização da nossa comunidade, trabalhando para o bem-estar de todos os cidadãos.</p>
-        <a href="#apoio" class="btn">Apoie a nossa candidatura</a>
+        <a href="#" class="btn">Apoie a nossa candidatura</a>
     </div>
 
     <!-- Rodapé -->
