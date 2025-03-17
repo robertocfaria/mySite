@@ -9,112 +9,97 @@
     <meta name="robots" content="index, follow">
     <title>Roberto Faria 2025 - Junta de Freguesia de Roriz</title>
     <style>
-        /* Estilos base */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: var(--background-color, #f0f4ff); /* Ajuste dinâmico */
-            color: var(--text-color, #333); /* Ajuste dinâmico */
+            background-color: #f0f4ff;
+            color: #333;
         }
 
-        /* Cabeçalho */
+        /* Cabeçalho fixo */
         header {
-            background-color: var(--header-bg, #002855); /* Ajuste dinâmico */
-            color: var(--header-text, white); /* Ajuste dinâmico */
+            background-color: #002855;
+            color: white;
             padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
         }
 
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
+        header img {
+            height: 50px;
         }
 
-        /* Seção principal */
         .main {
-            padding: 50px 20px;
+            padding: 100px 20px 50px;
         }
 
         .main h2 {
             font-size: 2em;
-            color: var(--main-title-color, #002855); /* Ajuste dinâmico */
+            color: #002855;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .main p {
             font-size: 1.2em;
-            color: var(--main-text-color, #444); /* Ajuste dinâmico */
+            color: #444;
             max-width: 800px;
             margin: 20px auto;
+            animation: fadeIn 2s ease-in-out;
         }
 
-        /* Rodapé */
-        footer {
-            background-color: var(--footer-bg, #ffd100); /* Ajuste dinâmico */
-            color: var(--footer-text, #002855); /* Ajuste dinâmico */
-            padding: 10px 0;
-            font-size: 0.9em;
-        }
-
-        /* Botão de ação */
+        /* Botão interativo */
         .btn {
             display: inline-block;
             margin-top: 20px;
             padding: 15px 30px;
-            background-color: var(--btn-bg, #002855); /* Ajuste dinâmico */
-            color: var(--btn-text, white); /* Ajuste dinâmico */
+            background-color: #ff7700;
+            color: white;
             text-decoration: none;
             font-size: 1em;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .btn:hover {
-            background-color: var(--btn-hover-bg, #004a9f); /* Ajuste dinâmico */
+            background-color: #cc6600;
+            transform: scale(1.1);
         }
 
-        /* Tema escuro */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --background-color: #121212;
-                --text-color: #e0e0e0;
-                --header-bg: #1f1f1f;
-                --header-text: #f0f4ff;
-                --main-title-color: #88c0d0;
-                --main-text-color: #e0e0e0;
-                --footer-bg: #444444;
-                --footer-text: #ffd100;
-                --btn-bg: #88c0d0;
-                --btn-text: #1f1f1f;
-                --btn-hover-bg: #5e81ac;
-            }
+        /* Rodapé */
+        footer {
+            background-color: #ffd100;
+            color: #002855;
+            padding: 10px 0;
+            font-size: 0.9em;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
-    <script>
-        // Define temas dinâmicos baseados no navegador
-        document.addEventListener('DOMContentLoaded', () => {
-            const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            if (theme === 'dark') {
-                document.documentElement.style.setProperty('--background-color', '#121212');
-                document.documentElement.style.setProperty('--text-color', '#e0e0e0');
-            } else {
-                document.documentElement.style.setProperty('--background-color', '#f0f4ff');
-                document.documentElement.style.setProperty('--text-color', '#333');
-            }
-        });
-    </script>
 </head>
 <body>
     <!-- Cabeçalho -->
     <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Partido_Social_Democrata_%28Portugal%29_logo.svg/2560px-Partido_Social_Democrata_%28Portugal%29_logo.svg.png" alt="Logo PSD">
         <h1>Roberto Faria 2025</h1>
-        <p>Candidato à Junta de Freguesia de Roriz</p>
     </header>
 
     <!-- Seção principal -->
     <div class="main">
-        <h2>Juntos por Roriz Melhor</h2>
+        <h2>Juntos por uma Roriz Melhor</h2>
         <p>Em 2025, contamos com o seu apoio para trazer inovação, transparência e proximidade à Junta de Freguesia de Roriz. Roberto Faria está comprometido com a valorização da nossa comunidade, trabalhando para o bem-estar de todos os cidadãos.</p>
-        <a href="#" class="btn">Junta-te a nos através do 911595613</a>
+        <a href="#" class="btn">Junta-te a nós através do 911595613</a>
     </div>
 
     <!-- Rodapé -->
